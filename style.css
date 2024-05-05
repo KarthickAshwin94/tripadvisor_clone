@@ -7,6 +7,13 @@
     justify-content: space-between;
     height:100px;
     align-items: center;
+    position:sticky;
+    top:0;
+    background-color: white;
+    z-index: 1;
+}
+.toogle{
+    display: none;
 }
 .header img {
     height:200px;
@@ -134,6 +141,7 @@
 }
 .banner__one,.banner__two,.banner__three,.banner__four{
     position: absolute;
+    
 }
 .banner__one{
     margin-left:10%;
@@ -218,7 +226,9 @@
 .award_winning__one{
     
     height:fit-content;
-    width:fit-content;
+    /* width:fit-content; */
+    flex-grow: 1;
+    flex-basis: 20%;
     display:flex;
     position: relative;
 
@@ -239,7 +249,10 @@
     position: relative;
     display: flex;
     height:fit-content;
-    width:fit-content;
+    /* width:fit-content; */
+    flex-grow: 1;
+    flex-basis: 20%;
+    
 }
 .award_winning__two img{
     height:350px;
@@ -259,7 +272,10 @@
 }
 .award_winning__three{
     height:fit-content;
-    width:fit-content;
+    /* width:fit-content; */
+    flex-grow: 1;
+    flex-basis: 20%;
+    
     position: relative;
     display: flex;
 
@@ -280,7 +296,10 @@
     position: relative;
     display: flex;
     height:fit-content;
-    width:fit-content;
+    /* width:fit-content; */
+    flex-grow: 1;
+    flex-basis: 20%;
+    
 
 }
 .award_winning__four img{
@@ -534,4 +553,29 @@
 .bottom__logo img{
     height:50px;
     width:50px;
+}
+
+@media screen and (max-width:800px){
+    body{
+        font-size:10px;
+    }
+    
+}
+
+@media screen and(max-width:600px){
+    .award_winning__one{
+        flex-basis:40% ;
+    }
+    .award_winning__two{
+        flex-basis:40% ;
+    }
+    .award_winning__three{
+        flex-basis:40% ;
+    }
+    .award_winning__four{
+        flex-basis:40% ;
+    }
+    .toogle{
+        display: block;
+    }
 }
